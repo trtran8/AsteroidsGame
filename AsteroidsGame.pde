@@ -7,17 +7,25 @@ public void setup()
 }
 public void draw() 
 {
+	  background(0);
   ree.show();
   ree.move();
 }
 public void keyPressed(){
 	if(key == 'w'){
-		ree.accelerate(0.2);
+		ree.accelerate(0.1);
 	}
 	if(key == 'a'){
 		ree.turn(-12);
 	}
 	if(key == 'd'){
 		ree.turn(12);
+	}
+	if(key == 's'){
+		ree.accelerate(-0.1);
+	}
+	if(key == 'e'){
+		ree.setX((int)(Math.random()*width));
+		ree.setY((int)(Math.random()*height));
 	}
 }
