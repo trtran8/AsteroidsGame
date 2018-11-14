@@ -21,7 +21,7 @@ public void draw()
 }
 public void keyPressed(){
 	if(key == 'w'){
-		ree.accelerate(0.1);
+		ree.accelerate(0.2);
 	}
 	if(key == 'a'){
 		ree.turn(-12);
@@ -30,7 +30,7 @@ public void keyPressed(){
 		ree.turn(12);
 	}
 	if(key == 's'){
-		ree.accelerate(-0.1);
+		ree.accelerate(-0.2);
 	}
 	if(key == 'e'){
 		ree.setX((int)(Math.random()*width));
