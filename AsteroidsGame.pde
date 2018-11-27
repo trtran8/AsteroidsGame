@@ -1,13 +1,18 @@
 //your variable declarations here
 Spaceship ree;
 Star [] big;
+Asteroids [] lots;
 public void setup() 
 {
   size(500,500);
   ree = new Spaceship();
   big = new Star[250];
+  lots = new Asteroids[7];
   for(int i = 0; i<big.length; i++){
 	  	big[i] = new Star();
+	 }
+	 for(int a = 0; a<lots.length; a++){
+	  	lots[a] = new Asteroids();
 	 }
 }
 public void draw() 
@@ -16,12 +21,16 @@ public void draw()
   for(int i = 0; i<big.length; i++){
 		big[i].show();
 	 }
+	 for(int a = 0; a<lots.length; a++){
+	 	lots[a].move();
+		lots[a].show();
+	 }
   ree.show();
   ree.move();
 }
 public void keyPressed(){
 	if(key == 'w'){
-		ree.accelerate(0.2);
+		ree.accelerate(0.15);
 	}
 	if(key == 'a'){
 		ree.turn(-12);
@@ -30,7 +39,7 @@ public void keyPressed(){
 		ree.turn(12);
 	}
 	if(key == 's'){
-		ree.accelerate(-0.2);
+		ree.accelerate(-0.15);
 	}
 	if(key == 'e'){
 		ree.setX((int)(Math.random()*width));
