@@ -11,7 +11,7 @@ public void setup()
   for(int i = 0; i<big.length; i++){
 	  	big[i] = new Star();
 	 }
-	 for(int a = 0; a<lots.length; a++){
+  for(int a = 0; a<lots.length; a++){
 	  	lots[a] = new Asteroids();
 	 }
 }
@@ -21,7 +21,7 @@ public void draw()
   for(int i = 0; i<big.length; i++){
 		big[i].show();
 	 }
-	 for(int a = 0; a<lots.length; a++){
+  for(int a = 0; a<lots.length; a++){
 	 	lots[a].move();
 		lots[a].show();
 	 }
@@ -30,7 +30,7 @@ public void draw()
 }
 public void keyPressed(){
 	if(key == 'w'){
-		ree.accelerate(0.15);
+		ree.accelerate(0.1);
 	}
 	if(key == 'a'){
 		ree.turn(-12);
@@ -39,7 +39,7 @@ public void keyPressed(){
 		ree.turn(12);
 	}
 	if(key == 's'){
-		ree.accelerate(-0.15);
+		ree.accelerate(-0.1);
 	}
 	if(key == 'e'){
 		ree.setX((int)(Math.random()*width));

@@ -1,12 +1,14 @@
 class Asteroids extends Floater
 {
+	int rotspeed;
   Asteroids(){
+  		 rotspeed=(int)(Math.random()*14)-7;
   		 myCenterX=Math.random()*width;
 		 myCenterY=Math.random()*height; //holds center coordinates   
   		 myDirectionX=Math.random()*6-3;
   		 myDirectionY=Math.random()*6-3; //holds x and y coordinates of the vector for direction of travel   
   		 myPointDirection=Math.random()*(5*PI);
-  		 corners=7;  //the number of corners, a triangular floater has 3   
+  		 corners=3;  //the number of corners, a triangular floater has 3   
   		 xCorners= new int[corners];   
   		 yCorners= new int[corners];   
   		 xCorners[0]=-8;
@@ -47,4 +49,30 @@ class Asteroids extends Floater
 	public double getPointDirection() {
 		return myPointDirection;
 	}
+	public void move ()   
+  {      
+    //change the x and y coordinates by myDirectionX and myDirectionY       
+    myCenterX += myDirectionX;    
+    myCenterY += myDirectionY;     
+
+    //wrap around screen    
+    if(myCenterX >width)
+    {     
+      myCenterX = 0;    
+    }    
+    else if (myCenterX<0)
+    {     
+      myCenterX = width;    
+    }    
+    if(myCenterY >height)
+    {    
+      myCenterY = 0;    
+    } 
+    
+    else if (myCenterY < 0)
+    {     
+      myCenterY = height;    
+    }   
+    myPointDirection+=rotspeed;
+  }   
 }
