@@ -8,15 +8,23 @@ class Asteroids extends Floater
   		 myDirectionX=Math.random()*6-3;
   		 myDirectionY=Math.random()*6-3; //holds x and y coordinates of the vector for direction of travel   
   		 myPointDirection=Math.random()*(5*PI);
-  		 corners=3;  //the number of corners, a triangular floater has 3   
+  		 corners=7;  //the number of corners, a triangular floater has 3   
   		 xCorners= new int[corners];   
   		 yCorners= new int[corners];   
-  		 xCorners[0]=-8;
-  		 yCorners[0]=-8;
-  		 xCorners[1]=16;
-  		 yCorners[1]=0;
-  		 xCorners[2]=-8;
-  		 yCorners[2]=8;
+  		 xCorners[0]=-16;
+  		 yCorners[0]=0;
+  		 xCorners[1]=-12;
+  		 yCorners[1]=14;
+  		 xCorners[2]=-6;
+  		 yCorners[2]=12;
+  		 xCorners[3]=0;
+  		 yCorners[3]=20;
+  		 xCorners[4]=10;
+  		 yCorners[4]=8;
+  		 xCorners[5]=2;
+  		 yCorners[5]=-8;
+  		 xCorners[6]=-12;
+  		 yCorners[6]=-8;
          myColor=color(153, 96, 47);
   }
   	public void setX(int x){
