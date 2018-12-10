@@ -5,8 +5,8 @@ class Asteroids extends Floater
   		 rotspeed=(int)(Math.random()*14)-7;
   		 myCenterX=Math.random()*width;
 		 myCenterY=Math.random()*height; //holds center coordinates   
-  		 myDirectionX=Math.random()*6-3;
-  		 myDirectionY=Math.random()*6-3; //holds x and y coordinates of the vector for direction of travel   
+  		 myDirectionX=Math.random()*4-2;
+  		 myDirectionY=Math.random()*4-2; //holds x and y coordinates of the vector for direction of travel   
   		 myPointDirection=Math.random()*(5*PI);
   		 corners=7;  //the number of corners, a triangular floater has 3   
   		 xCorners= new int[corners];   
