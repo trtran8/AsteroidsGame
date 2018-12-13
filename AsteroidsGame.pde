@@ -2,6 +2,7 @@
 Spaceship ree;
 Star [] big;
 ArrayList<Asteroids> epic = new ArrayList<Asteroids>();
+ArrayList<Bullet> pew = new ArrayList<Bullet>();
 public void setup() 
 {
   size(500,500);
@@ -29,7 +30,20 @@ public void draw()
 		if (dis<12){
 			epic.remove(a);
 		}
-	 }
+	}
+	  for (int s = 0; s<pew.size(); s++){
+  	pew.get(s).move();
+  	pew.get(s).show();
+  	for (int z = 0; z<epic.size(); z++){
+  		float dis2 = dist(pew.get(s).getX(),pew.get(s).getY(),epic.get(z).getX(),epic.get(z).getY());
+  		if(dis2<12){
+  			epic.remove(z);
+  			pew.remove(s);
+  			break;
+  		}
+	}
+  }
+
   ree.show();
   ree.move();
 
@@ -51,8 +65,11 @@ public void keyPressed(){
 		ree.setX((int)(Math.random()*width));
 		ree.setY((int)(Math.random()*height));
 	}
-	if(key == ' '){
+	if(key == 'q'){
 		ree.setDirectionX(0);
 		ree.setDirectionY(0);
+	}
+	if(key == ' '){
+		pew.add(new Bullet(ree));
 	}
 }
