@@ -25,7 +25,7 @@ class Asteroids extends Floater
   		 yCorners[5]=-8;
   		 xCorners[6]=-12;
   		 yCorners[6]=-8;
-         myColor=color(153, 96, 47);
+         myColor=color(239, 247, 178);
   }
   	public void setX(int x){
     	myCenterX = x;

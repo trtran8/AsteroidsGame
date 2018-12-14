@@ -12,7 +12,7 @@ public void setup()
   for(int i = 0; i<big.length; i++){
 	  	big[i] = new Star();
 	 }
-  for(int a = 0; a< 8; a++){
+  for(int a = 0; a< 11; a++){
 	  	epic.add(new Asteroids());
 	 }
 }
@@ -41,7 +41,7 @@ public void draw()
   			pew.remove(s);
   			break;
   		}
-	}
+	} 
   }
 
   ree.show();
